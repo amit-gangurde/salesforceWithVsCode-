@@ -3,8 +3,8 @@ public class candidateTestClass
 {
     @isTest
     public static void testing()
-        {
-                        Candidate_Amit__c obj=new Candidate_Amit__c();
+        
+        {                Candidate_Amit__c obj=new Candidate_Amit__c();
                          obj.Salutation__c='Mr';
                         obj.First_Name__c='Pranav';
                          obj.Last_Name__c='Naik';
