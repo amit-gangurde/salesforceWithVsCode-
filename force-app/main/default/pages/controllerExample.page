@@ -1,0 +1,6 @@
+<apex:page controller="SetGetExample" >
+    {!name}
+    <br/>
+    {!salary}
+    
+</apex:page>

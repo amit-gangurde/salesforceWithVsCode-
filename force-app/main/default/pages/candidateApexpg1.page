@@ -1,0 +1,20 @@
+<apex:page standardController="Candidate_Yourname__c">
+    <apex:form >
+        <apex:pageBlock >
+            
+            <apex:pageBlockSection >
+                
+            <apex:inputField value="{!Candidate_Yourname__c.Email__c}" /> 
+            <apex:inputField value="{!Candidate_Yourname__c.Contact__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!save}"/>
+                 <apex:commandButton value="Edit" action="{!Edit}"/>
+                 <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                <apex:commandButton value="Delete" action="{Delete}"/>
+             
+              </apex:pageBlockButtons>            
+            
+           </apex:pageBlock> 
+    </apex:form>
+</apex:page>

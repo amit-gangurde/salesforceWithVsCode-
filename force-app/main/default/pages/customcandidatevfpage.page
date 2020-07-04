@@ -1,0 +1,58 @@
+<apex:page controller="CustomApex" tabStyle="Candidate_Yourname__c">
+    <apex:form id="frm" onmouseover="validate()" ondblclick="click()" >
+    <apex:pageBlock mode="edit">
+        <apex:image url="{!$Resource.enzigmpng}" height="220" width="330"/>
+      <apex:pageBlockSection title="information">
+          <apex:inputField value="{!Candidate.Salutation__c}" id="Salutation__c"/>  
+          <apex:inputField value="{!Candidate.First_Name__c}" id="First_Name__c"/>
+          <apex:inputField value="{!Candidate.Last_Name__c}" id="Last_Name__c"/>
+          <apex:inputField value="{!Candidate.DOB__c}" id="DOB__c"/>
+	      <apex:inputField value="{!Candidate.Email__c}" id="Email__c"/>
+          <apex:inputField value="{!Candidate.Country__c}" id="Country__c"/>
+          <apex:inputField value="{!Candidate.State__c}" id="State__c"/>
+          <apex:inputField value="{!Candidate.Application_Date__c}" id="Application_Date__c"/>
+          <apex:inputField value="{!Candidate.Status__c}" id="Status__c"/>
+          <apex:inputField value="{!Candidate.Expected_Salary__c}" id="Expected_Salary__c"/>
+          <apex:inputField value="{!Candidate.Jobs__c}" id="Jobs__c"/>
+           <apex:inputField value="{!Candidate.Contact__c}" id="Contact__c"/>
+            <apex:commandButton value="Save" action="{!save}" id="btn" /> 
+          
+          <script>
+          		function validate()
+                {
+                    var Salutation__c=document.getElementById('{!$Component.Salutation__c}').value;
+                    var First_Name__c=document.getElementById('{!$Component.First_Name__c}').value;
+                    var Last_Name__c=document.getElementById('{!$Component.Last_Name__c}').value;
+                    var DOB__c=document.getElementById('{!$Component.DOB__c}').value;
+                    var Email__c=document.getElementById('{!$Component.Email__c}').value;
+                    var Country__c=document.getElementById('{!$Component.Country__c}').value;
+                    var State__c=document.getElementById('{!$Component.State__c}').value;
+                    var Application_Date__c=document.getElementById('{!$Component.Application_Date__c}').value;
+                    var Status__c=document.getElementById('{!$Component.Status__c}').value;
+                    var Expected_Salary__c=document.getElementById('{!$Component.Expected_Salary__c}').value;
+                    var Jobs__c=document.getElementById('{!$Component.Jobs__c}').value;
+                     var Contact__c=document.getElementById('{!$Component.Contact__c}').value;
+                    
+                    
+                    if(Salutation__c==""|| Contact__c==""|| First_Name__c=="" || Last_Name__c=="" || DOB__c=="" || Email__c=="" || Country__c=="" || State__c=="" || Application_Date__c=="" || Status__c=="" || Expected_Salary__c=="" || Jobs__c=="")
+                        {
+                            document.getElementById('{!$Component.btn}').disabled=true;
+                        }
+                    else
+                        {
+                           document.getElementById('{!$Component.btn}').disabled=false;  
+                        }
+                }
+          
+                function click()
+                {
+                    alert("data submited");
+                }
+          </script>
+          
+          </apex:pageBlockSection>
+        
+       
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
